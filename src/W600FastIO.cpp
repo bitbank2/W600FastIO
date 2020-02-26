@@ -42,7 +42,7 @@ void w600PinMode(int pin, int mode)
 } /* w600PinMode() */
 
 //
-// Quick GPIO read from B ports
+// Quick GPIO read
 // pin is WM_IO_PA_00 to WM_IO_PA_15 or WM_IO_PB_00 to WM_IO_PB_31
 //
 int w600DigitalRead(int pin)
@@ -57,7 +57,7 @@ int w600DigitalRead(int pin)
   return (pGPIO[iOffset] >> pin) & 1;
 } /* w600DigitalRead() */
 //
-// Quick GPIO write to B ports
+// Quick GPIO write
 // pin is WM_IO_PA_00 to WM_IO_PA_15 or WM_IO_PB_00 to WM_IO_PB_31
 //
 void w600DigitalWrite(int pin, int value)
@@ -76,4 +76,5 @@ uint32_t reg;
  else
    pGPIO[iOffset] = reg & ~(1<<pin);
 } /* w600DigitalWrite() */
+
 #endif // W600_EV

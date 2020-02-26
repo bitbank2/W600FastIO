@@ -63,5 +63,4 @@ void w600PinMode(int pin, int mode);
 int w600DigitalRead(int pin);
 void w600DigitalWrite(int pin, int value);
 
-
 #endif // _W600FASTIO_
